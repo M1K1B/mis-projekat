@@ -8,7 +8,7 @@ import AdType from "../../utils/AdType";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase-conf";
 
-const Oglas = ({ adData, isMyAd, reload }) => {
+const Ad = ({ adData, isMyAd, reload }) => {
   let adImage = {
     icon: null,
     color: "",
@@ -41,33 +41,33 @@ const Oglas = ({ adData, isMyAd, reload }) => {
 
   return (
     <>
-      <div class="card mb-3">
-        <div class="row g-0">
+      <div className="card mb-3">
+        <div className="row g-0">
           <div
-            class="col-md-3 d-flex justify-content-center align-items-center"
+            className="col-md-3 d-flex justify-content-center align-items-center"
             style={{ backgroundColor: adImage.color }}
           >
             {adImage.icon}
           </div>
-          <div class="col-md-9">
-            <div class="card-body">
+          <div className="col-md-9">
+            <div className="card-body">
               <div className="d-flex justify-content-between align-items-center">
-                <h5 class="card-title">{adData.title}</h5>
+                <h5 className="card-title">{adData.title}</h5>
                 <div className="d-flex gap-3">
-                  <small class="text-muted">
+                  <small className="text-muted">
                     <BsCurrencyDollar className="mb-1" /> {adData.price} rsd/h
                   </small>
-                  <small class="text-muted">
+                  <small className="text-muted">
                     <BiMap className="mb-1" /> {adData.city}
                   </small>
                 </div>
               </div>
 
-              <p class="card-text">{adData.about}</p>
+              <p className="card-text">{adData.about}</p>
               <hr />
-              <p class="card-text">
+              <p className="card-text">
                 <div className="d-flex justify-content-between align-items-center">
-                  <p class="text-muted text-decoration-none m-0">
+                  <p className="text-muted text-decoration-none m-0">
                     <BsPerson className="mb-1 me-1" />
                     {adData.creatorName}
                   </p>
@@ -94,4 +94,4 @@ const Oglas = ({ adData, isMyAd, reload }) => {
   );
 };
 
-export default Oglas;
+export default Ad;

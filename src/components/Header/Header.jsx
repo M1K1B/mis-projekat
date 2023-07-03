@@ -14,13 +14,13 @@ const Header = () => {
   auth.onAuthStateChanged((e) => setLoggedIn(e != null));
 
   return (
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-        <Link class="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg bg-light">
+      <div className="container">
+        <Link className="navbar-brand" to="/">
           CuvajPsa
         </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -28,7 +28,7 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -37,7 +37,7 @@ const Header = () => {
                 Početna
               </Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/ads">
                 Oglasi
               </Link>
